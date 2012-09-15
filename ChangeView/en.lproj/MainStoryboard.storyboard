@@ -1,23 +1,105 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12B19" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="X48-fc-uNn">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
-        <scene sceneID="5">
+        <!--View Controller - Dummy View-->
+        <scene sceneID="bEr-rx-VZb">
             <objects>
-                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                <viewController id="PN0-B0-5xg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yTc-rQ-hzJ">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.2181982177" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Dummy View" id="Dkc-KH-3It"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iH9-Ba-g1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="694" y="340"/>
+        </scene>
+        <!--Navigation Controller - View Changer-->
+        <scene sceneID="yoK-Mv-BIK">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Cau-C0-U9z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="View Changer" id="cbK-jK-tOc"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="F4t-Za-cM0">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yy9-Sf-oES" kind="relationship" relationship="rootViewController" id="lT1-c6-qsM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8hX-Ex-Cpj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="665" y="-316"/>
+        </scene>
+        <!--View Controller - View Changer-->
+        <scene sceneID="BGB-E4-Ikm">
+            <objects>
+                <viewController id="yy9-Sf-oES" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MRX-J6-hds">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pYw-Iu-Rg0">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pYw-Iu-Rg0" firstAttribute="top" secondItem="MRX-J6-hds" secondAttribute="top" type="default" id="1lg-ra-pGG"/>
+                            <constraint firstItem="pYw-Iu-Rg0" firstAttribute="bottom" secondItem="MRX-J6-hds" secondAttribute="bottom" type="default" id="Jt8-dX-RBq"/>
+                            <constraint firstItem="pYw-Iu-Rg0" firstAttribute="trailing" secondItem="MRX-J6-hds" secondAttribute="trailing" type="default" id="aPC-MF-7i4"/>
+                            <constraint firstItem="pYw-Iu-Rg0" firstAttribute="leading" secondItem="MRX-J6-hds" secondAttribute="leading" type="default" id="ph5-Vf-981"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="View Changer" id="opX-yW-tM7"/>
+                    <navigationItem key="navigationItem" title="View Changer" id="2Vs-Ed-sgT">
+                        <barButtonItem key="rightBarButtonItem" title="Toogle View" id="lDC-vc-96q">
+                            <connections>
+                                <action selector="changeView:" destination="yy9-Sf-oES" id="UGU-Bd-M0H"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fU7-rD-56n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1143" y="-316"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="utr-C7-NCj">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="X48-fc-uNn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="PFD-hA-yNf"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="kjy-eR-DqW">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Cau-C0-U9z" kind="relationship" relationship="viewControllers" id="MEM-Tm-FtN"/>
+                        <segue destination="PN0-B0-5xg" kind="relationship" relationship="viewControllers" id="OS0-FU-OtE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dyq-1V-r4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="160" y="14"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="changeView:"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
